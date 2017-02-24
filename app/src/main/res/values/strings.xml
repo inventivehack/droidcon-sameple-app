@@ -1,3 +1,77 @@
 <resources>
-  <string name="app_name">Halo Testing Example</string>
+  <string name="section_title_home">Inicio</string>
+
+  <!-- Error messages -->
+  <string name="message_error_response_network">Ocurrió un error.\nVuelva a intentarlo</string>
+  <string name="message_error_network">Ocurrió un error de conexión.\nVuelva a intentarlo</string>
+  <string name="message_error_authentication">Error de autenticación. Por favor vuelva a iniciar sesión</string>
+
+
+  <!--Login and Register-->
+  <string name="title_login">Iniciar sesión</string>
+  <string name="hint_mail">Mail</string>
+  <string name="hint_password">Contraseña</string>
+  <string name="login_with_email">Entra</string>
+  <string name="login_with_facebook">Continuar con Facebook</string>
+  <string name="forget_password">Olvidé mi contraseña</string>
+  <string name="enter_register">¿Aún no tienes cuenta? <![CDATA[<font color="#f1404b"><b>Regístrate</b></font>]]></string>
+
+  <string name="message_email_empty">Ingresa tu correo</string>
+  <string name="message_email_invalid">Correo inválido</string>
+  <string name="message_password_empty">Ingresa tu contraseña</string>
+  <string name="message_min_characters_password">Tu contraseña debe de tener al menos 6 caracteres</string>
+  <string name="message_start_login">Iniciando sesión…</string>
+  <string name="message_error_email_register">Este correo ya fue utilizado</string>
+  <string name="message_error_login">El correo o la contraseña son inválidos</string>
+
+  <string name="title_register">Crea tu cuenta</string>
+  <string name="add_image">+</string>
+  <string name="hint_fist_name">Nombre</string>
+  <string name="hint_last_name">Apellido</string>
+  <string name="hint_phone">Télefono</string>
+  <string name="hint_confirm_password">Confirma tu contraseña</string>
+  <string name="register_with_email">Registrarte</string>
+  <string name="enter_login">¿Ya tienes una cuenta? <![CDATA[<font color="#f1404b"><b>Iniciar sesión</b></font>]]></string>
+
+
+  <string name="message_fist_name_empty">Ingresa tu nombre</string>
+  <string name="message_last_name_empty">Ingresa tu apellido</string>
+  <string name="message_phone_empty">Ingresa un número de teléfono</string>
+  <string name="message_phone_invalid">Número de teléfono invalido. </string>
+  <string name="message_confirm_password_empty">Confirma tu contraseña</string>
+  <string name="different_passwords">Las contraseñas no coinciden</string>
+  <string name="message_start_register">Registrando…</string>
+  <string name="message_error_register">Alguno de los datos es inválido</string>
+
+
+  <string name="recover_password">Recuperar contraseña</string>
+  <string name="send">Enviar</string>
+  <string name="cancel">Cancelar</string>
+  <string name="message_sending">Enviando…</string>
+  <string name="send_email">Se te envió un correo para recuperar tu contraseña</string>
+
+  <!--Profile-->
+  <string name="title_activity_profile">Mi perfil</string>
+  <string name="update_changes">Actualizar cambios</string>
+
+  <!--Close session-->
+  <string name="section_logout">Cerrar sesión</string>
+  <string name="message_close_session">¿Estás seguro de que quieres cerrar sesión?</string>
+  <string name="accept">Aceptar</string>
+  <string name="section_edit_profile">Editar perfil</string>
+
+  <string name="message_update_profile">Actualizando perfil…</string>
+  <string name="message_success_updated_profile">Perfil actualizado</string>
+  <string name="select_picture_source">Selecciona o toma una foto</string>
+
+  <string name="message_error_take_photo">Ocurrió un error al crear la foto.\nVuelva a intentarlo más tarde. </string>
+  <string name="message_error_get_profile">Ocurrió un error al actualizar su perfil.\nVuelva a intentarlo</string>
+  <string name="message_error_upload_profile_photo_response_network">Ocurro un error al actualizar su foto de pefil..\nVuelva a intentarlo más tarde</string>
+  <string name="message_error_upload__profile_photo_network">Ocurro un error al actualizar su foto de pefil.\nVuelva a intentarlo</string>
+
+
+
+
+  <string name="authority">hack.inventive.com.androidboilerplate</string>
+
 </resources>

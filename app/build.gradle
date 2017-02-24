@@ -1,4 +1,9 @@
 apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+
+def BASE_URL_DEBUG_SERVER = '"' + UrlDebugServer + '"';
+def BASE_URL_PRODUCTION_SERVER = '"' + UrlProductionServer + '"';
 
 android {
   compileSdkVersion 25
@@ -10,20 +15,67 @@ android {
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    vectorDrawables.useSupportLibrary = true
   }
+
+  dexOptions {
+    javaMaxHeapSize "2048M"
+    preDexLibraries = false
+  }
+
   buildTypes {
     release {
       minifyEnabled false
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
+
+  productFlavors {
+    mock {
+      //      applicationIdSuffix ".debug"
+      resValue 'string', 'app_name', "Debug Halo App"
+      buildConfigField 'String', 'BASE_URL', BASE_URL_DEBUG_SERVER
+    }
+    prod {
+      resValue 'string', 'app_name', "App Halo"
+      buildConfigField 'String', 'BASE_URL', BASE_URL_PRODUCTION_SERVER
+    }
+  }
+
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
 }
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
+
+  compile supportDependencies.appCompat
+  compile supportDependencies.design
+  compile daggerDependencies.dagger
+  annotationProcessor daggerDependencies.daggerCompiler
+
+  compile reactiveDependencies.rxJava
+  compile reactiveDependencies.rxAndroid
+  compile butterKnifeDependencies.butterknife
+  annotationProcessor butterKnifeDependencies.butterknifeCompiler
+
+  compile retrofitDependencies.retrofit
+  compile retrofitDependencies.gson
+  compile retrofitDependencies.rxJava
+  compile retrofitDependencies.loggingInterceptor
+  compile retrofitDependencies.okHttp
+
+  compile glide
+  compile circleImageView
+
+
   androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
     exclude group: 'com.android.support', module: 'support-annotations'
   })
-  compile 'com.android.support:appcompat-v7:25.2.0'
   testCompile 'junit:junit:4.12'
+  testCompile 'com.squareup.okhttp3:mockwebserver:3.6.0'
+  testCompile 'org.hamcrest:hamcrest-library:1.3'
 }
