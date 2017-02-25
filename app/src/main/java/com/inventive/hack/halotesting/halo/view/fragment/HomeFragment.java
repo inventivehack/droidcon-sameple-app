@@ -1,4 +1,4 @@
-package com.inventive.hack.halotesting.view.fragment;
+package com.inventive.hack.halotesting.halo.view.fragment;
 
 import com.inventive.hack.halotesting.R;
 import com.inventive.hack.halotesting.common.view.BaseFragment;

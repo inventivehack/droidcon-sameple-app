@@ -2,31 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/navigation_header"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="160dp"
     android:orientation="horizontal"
-    android:background="@color/primary"
-    android:paddingTop="@dimen/navigation_header_margin_top"
+    android:background="@color/window_background"
     >
 
-  <de.hdodenhof.circleimageview.CircleImageView
-      android:id="@+id/image_profile"
-      android:layout_width="48dp"
-      android:layout_height="48dp"
-      android:layout_margin="@dimen/spacing_large"
-      android:src="@mipmap/ic_launcher"
+  <ImageView
       android:contentDescription="@string/app_name"
-      />
-
-  <TextView
-      android:id="@+id/input_name_profile"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center_vertical"
-      android:text="Nombre de perfil"
-      android:maxLines="2"
-      android:textColor="@color/primary_text_white"
-      android:textSize="16sp"
-      android:textStyle="bold"
+      android:scaleType="centerCrop"
+      android:src="@drawable/header_halo"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
       />
 
 </LinearLayout>

@@ -12,6 +12,8 @@
     <item name="android:textColorHint">@color/hint_text_black</item>
     <item name="colorControlHighlight">@color/divider_black</item>
     <item name="colorButtonNormal">@color/accent</item>
+    <item name="android:windowBackground">@color/window_background</item>
+
     <item name="android:listDivider">@color/divider_black</item>
   </style>
 
@@ -23,7 +25,7 @@
   </style>
 
   <style name="AppTheme.HomeNavigationViewTheme" parent="Base.Theme.AppCompat">
-    <item name="android:windowBackground">@color/primary_dark</item>
+    <item name="android:windowBackground">@color/primary</item>
   </style>
 
 </resources>

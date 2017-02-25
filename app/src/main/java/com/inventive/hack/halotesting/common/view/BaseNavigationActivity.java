@@ -7,11 +7,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.inventive.hack.halotesting.R;
-import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * Actividad base para crear y manejar un menú lateral o Navigation Drawer.
@@ -21,8 +19,8 @@ public abstract class BaseNavigationActivity extends BaseFragActivity
 
   @BindView(R.id.drawer_layout) protected DrawerLayout mDrawerLayout;
   @BindView(R.id.navigation_view) protected NavigationView mNavigationView;
-  protected CircleImageView mImageProfile;
-  protected TextView mInputNameProfile;
+  //protected CircleImageView mImageProfile;
+  //protected TextView mInputNameProfile;
 
   @Override protected void setupActionBar(ActionBar actionBar) {
     super.setupActionBar(actionBar);
@@ -44,8 +42,8 @@ public abstract class BaseNavigationActivity extends BaseFragActivity
 
   private void initHeaderView() {
     View header = mNavigationView.getHeaderView(0);
-    mImageProfile = ButterKnife.findById(header, R.id.image_profile);
-    mInputNameProfile = ButterKnife.findById(header, R.id.input_name_profile);
+    //mImageProfile = ButterKnife.findById(header, R.id.image_profile);
+    //mInputNameProfile = ButterKnife.findById(header, R.id.input_name_profile);
     ButterKnife.findById(header, R.id.navigation_header).setOnClickListener(this);
   }
 
@@ -100,6 +98,4 @@ public abstract class BaseNavigationActivity extends BaseFragActivity
   public void closeDrawerMenu() {
     mDrawerLayout.closeDrawer(GravityCompat.START);
   }
-
-
 }

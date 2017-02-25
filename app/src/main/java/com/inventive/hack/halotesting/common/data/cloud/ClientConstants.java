@@ -19,26 +19,26 @@ public class ClientConstants {
    */
   public static final class EndPointApi {
     public static final String LOGIN = "/users/signin/";
-    public static final String LOGIN_FACEBOOK = "/users/signup/facebook/";
-    public static final String REGISTER = "/users/signup/";
-    public static final String RECOVER_PASSWORD = "/users/forgot_password/";
-    public static final String PROFILE = "/users/{" + Path.USER_NAME + "}/";
-    public static final String PICTURE = "/users/{" + Path.USER_NAME + "}/picture/";
 
+    public static final String CAMPAIGN = "/campaign-missions";
+    public static final String ENEMIES = "/enemies";
+    public static final String WEAPONS = "/weapons";
   }
 
   /**
    * Paths del Api.
    */
   public static final class Path {
-    public static final String USER_NAME = "user_name";
   }
 
   /**
    * Headers del Api.
    */
   public static final class Header {
-    public static final String AUTHORIZATION = "Authorization";
+
+    public static final String AUTHORIZATION = "Ocp-Apim-Subscription-Key";
+    public static final String VALUE_AUTHORIZATION = "70077eaf30b54ccd8fc9179b183f2f63";
+
   }
 
   /**

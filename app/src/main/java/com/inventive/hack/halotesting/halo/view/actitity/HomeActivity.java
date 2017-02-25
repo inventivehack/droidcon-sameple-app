@@ -1,10 +1,10 @@
-package com.inventive.hack.halotesting.view.actitity;
+package com.inventive.hack.halotesting.halo.view.actitity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import com.inventive.hack.halotesting.common.view.BaseNavigationActivity;
-import com.inventive.hack.halotesting.view.fragment.HomeFragment;
+import com.inventive.hack.halotesting.halo.view.fragment.HomeFragment;
 
 public class HomeActivity extends BaseNavigationActivity {
 
