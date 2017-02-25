@@ -16,13 +16,13 @@ import javax.inject.Inject;
  * 24/02/2017.
  */
 
-public class HaloDataRespository implements HaloRepository {
+public class HaloDataRepository implements HaloRepository {
   private final HaloDataSourceFactory mSourceFactory;
   private final CampaingResponseMapper mCampaingResponseMapper;
   private final EnemyResponseMapper mEnemyResponseMapper;
   private final WeaponResponseMapper mWeaponResponseMapper;
 
-  @Inject public HaloDataRespository() {
+  @Inject public HaloDataRepository() {
     mSourceFactory = new HaloDataSourceFactory();
     mCampaingResponseMapper = new CampaingResponseMapper();
     mEnemyResponseMapper = new EnemyResponseMapper();
