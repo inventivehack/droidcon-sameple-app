@@ -1,10 +1,10 @@
-package com.inventive.hack.halotesting.halo.domain.model;
+package com.inventive.hack.halotesting.halo.data.entity;
 
 /**
  * 24/02/2017.
  */
 
-public class WeaponsResponse {
+public class WeaponEntityResponse {
 
   private String name;
   private String description;
@@ -12,8 +12,10 @@ public class WeaponsResponse {
   private String largeIconImageUrl;
   private String smallIconImageUrl;
   private boolean isUsableByPlayer;
+  private String id;
+  private String contentId;
 
-  public WeaponsResponse(String name, String description, String type,
+  public WeaponEntityResponse(String name, String description, String type,
       String largeIconImageUrl, String smallIconImageUrl, boolean isUsableByPlayer, String id,
       String contentId) {
     this.name = name;
@@ -22,6 +24,8 @@ public class WeaponsResponse {
     this.largeIconImageUrl = largeIconImageUrl;
     this.smallIconImageUrl = smallIconImageUrl;
     this.isUsableByPlayer = isUsableByPlayer;
+    this.id = id;
+    this.contentId = contentId;
   }
 
   public String getName() {
@@ -48,4 +52,11 @@ public class WeaponsResponse {
     return isUsableByPlayer;
   }
 
+  public String getId() {
+    return id;
+  }
+
+  public String getContentId() {
+    return contentId;
+  }
 }

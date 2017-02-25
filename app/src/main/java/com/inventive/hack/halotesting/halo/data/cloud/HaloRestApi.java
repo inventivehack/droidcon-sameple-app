@@ -2,8 +2,9 @@ package com.inventive.hack.halotesting.halo.data.cloud;
 
 import com.inventive.hack.halotesting.halo.data.entity.CampaignEntityResponse;
 import com.inventive.hack.halotesting.halo.data.entity.EnemyEntityResponse;
-import com.inventive.hack.halotesting.halo.data.entity.WeaponsEntityResponse;
+import com.inventive.hack.halotesting.halo.data.entity.WeaponEntityResponse;
 import io.reactivex.Observable;
+import java.util.List;
 
 /**
  * 24/02/2017.
@@ -11,9 +12,9 @@ import io.reactivex.Observable;
 
 public interface HaloRestApi {
 
-  Observable<CampaignEntityResponse> getCampaign();
+  Observable<List<CampaignEntityResponse>> getCampaign();
 
-  Observable<EnemyEntityResponse> getEnemies();
+  Observable<List<EnemyEntityResponse>> getEnemies();
 
-  Observable<WeaponsEntityResponse> getWeapons();
+  Observable<List<WeaponEntityResponse>> getWeapons();
 }

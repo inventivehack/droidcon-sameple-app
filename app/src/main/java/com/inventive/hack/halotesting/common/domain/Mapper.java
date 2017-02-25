@@ -25,14 +25,14 @@ public abstract class Mapper<T1, T2> {
    */
   public abstract T2 map(T1 value);
 
-  /**
-   * Método abstracto que revierte el modelo de datos {@link T2} al modelo de datos {@link T1}. La
-   * clase que implemente este método definirá su comportamiento.
-   *
-   * @param value es el modelo de datos origen.
-   * @return Modelo de datos final.
-   */
-  public abstract T1 reverseMap(T2 value);
+  ///**
+  // * Método abstracto que revierte el modelo de datos {@link T2} al modelo de datos {@link T1}. La
+  // * clase que implemente este método definirá su comportamiento.
+  // *
+  // * @param value es el modelo de datos origen.
+  // * @return Modelo de datos final.
+  // */
+  //public abstract T1 reverseMap(T2 value);
 
   /**
    * Método abstracto que convierte una lista del modelo de datos {@link T1} a una lista del modelo
@@ -49,19 +49,19 @@ public abstract class Mapper<T1, T2> {
     return returnValues;
   }
 
-  /**
-   * Método abstracto que revierte una lista del modelo de datos {@link T2} a una lista del modelo
-   * de
-   * datos {@link T1}.
-   *
-   * @param values es la lista del modelo de datos de origen.
-   * @return Lista del modelo de datos final
-   */
-  public List<T1> reverseMap(List<T2> values) {
-    List<T1> returnValues = new ArrayList<>(values.size());
-    for (T2 value : values) {
-      returnValues.add(reverseMap(value));
-    }
-    return returnValues;
-  }
+  ///**
+  // * Método abstracto que revierte una lista del modelo de datos {@link T2} a una lista del modelo
+  // * de
+  // * datos {@link T1}.
+  // *
+  // * @param values es la lista del modelo de datos de origen.
+  // * @return Lista del modelo de datos final
+  // */
+  //public List<T1> reverseMap(List<T2> values) {
+  //  List<T1> returnValues = new ArrayList<>(values.size());
+  //  for (T2 value : values) {
+  //    returnValues.add(reverseMap(value));
+  //  }
+  //  return returnValues;
+  //}
 }
