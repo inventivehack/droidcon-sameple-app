@@ -4,16 +4,16 @@ import com.inventive.hack.halotesting.R;
 import com.inventive.hack.halotesting.common.view.BaseFragment;
 
 /**
- * 13/02/2017.
+ * 26/02/2017.
  */
 
-public class HomeFragment extends BaseFragment {
+public class CampaignDetailFragment extends BaseFragment {
 
-  public static HomeFragment newInstance() {
-    return new HomeFragment();
+  public static CampaignDetailFragment newInstance() {
+    return new CampaignDetailFragment();
   }
 
   @Override protected int getFragmentLayout() {
-    return R.layout.fragment_home;
+    return R.layout.fragment_campaign_detail;
   }
 }

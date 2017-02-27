@@ -1,5 +1,8 @@
 <resources>
-  <string name="section_title_home">Inicio</string>
+
+  <string name="section_title_campaign">Campaña</string>
+  <string name="section_title_enemies">Enemigos</string>
+  <string name="section_title_weapons">Armas</string>
 
   <!-- Error messages -->
   <string name="message_error_response_network">Ocurrió un error.\nVuelva a intentarlo</string>
@@ -72,6 +75,5 @@
 
 
 
-  <string name="authority">hack.inventive.com.androidboilerplate</string>
 
 </resources>
