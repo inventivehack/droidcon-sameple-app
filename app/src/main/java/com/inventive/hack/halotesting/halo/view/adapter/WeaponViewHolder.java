@@ -44,7 +44,7 @@ public class WeaponViewHolder extends RecyclerView.ViewHolder {
   }
 
   private void renderImage(String imageUrl) {
-    Glide.with(mContext).load(imageUrl).crossFade().centerCrop().into(mImageWeapon);
+    Glide.with(mContext).load(imageUrl).crossFade().into(mImageWeapon);
   }
 
   private void renderTitle(String name) {

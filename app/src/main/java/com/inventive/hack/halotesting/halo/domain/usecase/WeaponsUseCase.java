@@ -20,6 +20,6 @@ public class WeaponsUseCase extends UseCase<List<WeaponResponse>> {
   }
 
   @Override protected Observable<List<WeaponResponse>> buildObservableUseCase() {
-    return null;
+    return mHaloRepository.getWeapons();
   }
 }

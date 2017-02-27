@@ -18,11 +18,10 @@ public class ClientConstants {
    * Rutas de acceso al Api.
    */
   public static final class EndPointApi {
-    public static final String LOGIN = "/users/signin/";
 
-    public static final String CAMPAIGN = "/campaign-missions";
-    public static final String ENEMIES = "/enemies";
-    public static final String WEAPONS = "/weapons";
+    public static final String CAMPAIGN = "/metadata/h5/metadata/campaign-missions";
+    public static final String ENEMIES = "/metadata/h5/metadata/enemies";
+    public static final String WEAPONS = "/metadata/h5/metadata/weapons";
   }
 
   /**

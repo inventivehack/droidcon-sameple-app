@@ -35,8 +35,14 @@ public class EnemiesAdapter extends RecyclerView.Adapter<EnemiesViewHolder> {
     notifyDataSetChanged();
   }
 
+
+  public boolean isEmptyList() {
+    return mViewModelList.isEmpty();
+  }
+
+
   @Override public EnemiesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-    View viewItem = inflater.inflate(R.layout.item_campaign, parent, false);
+    View viewItem = inflater.inflate(R.layout.item_enemy, parent, false);
     return new EnemiesViewHolder(viewItem, mPresenter, mContext);
   }
 

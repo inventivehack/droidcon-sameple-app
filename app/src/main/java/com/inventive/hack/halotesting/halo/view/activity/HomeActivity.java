@@ -8,8 +8,13 @@ import com.inventive.hack.halotesting.common.view.BaseNavigationActivity;
 import com.inventive.hack.halotesting.halo.view.fragment.CampaignFragment;
 import com.inventive.hack.halotesting.halo.view.fragment.EnemiesFragment;
 import com.inventive.hack.halotesting.halo.view.fragment.WeaponsFragment;
+import com.inventive.hack.halotesting.injector.HasComponent;
+import com.inventive.hack.halotesting.injector.component.DaggerHaloComponent;
+import com.inventive.hack.halotesting.injector.component.HaloComponent;
 
-public class HomeActivity extends BaseNavigationActivity {
+public class HomeActivity extends BaseNavigationActivity implements HasComponent<HaloComponent> {
+
+  private HaloComponent mComponent;
 
   public static Intent provideIntent(Context context) {
     return new Intent(context, HomeActivity.class).addFlags(
@@ -18,6 +23,15 @@ public class HomeActivity extends BaseNavigationActivity {
 
   @Override protected Fragment getFragmentInstance() {
     return CampaignFragment.newInstance();
+  }
+
+  @Override protected void initView() {
+    super.initView();
+    initializeInjector();
+  }
+
+  private void initializeInjector() {
+    mComponent = DaggerHaloComponent.builder().mainComponent(getApplicationComponent()).build();
   }
 
   @Override protected void selectNavigationHeader() {
@@ -37,5 +51,9 @@ public class HomeActivity extends BaseNavigationActivity {
         replaceFragment(WeaponsFragment.newInstance());
         break;
     }
+  }
+
+  @Override public HaloComponent getComponent() {
+    return mComponent;
   }
 }

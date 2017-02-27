@@ -1,5 +1,6 @@
 package com.inventive.hack.halotesting.halo.view.fragment;
 
+import android.os.Bundle;
 import com.inventive.hack.halotesting.R;
 import com.inventive.hack.halotesting.common.view.BaseFragment;
 
@@ -9,8 +10,11 @@ import com.inventive.hack.halotesting.common.view.BaseFragment;
 
 public class CampaignDetailFragment extends BaseFragment {
 
-  public static CampaignDetailFragment newInstance() {
-    return new CampaignDetailFragment();
+  public static CampaignDetailFragment newInstance(Bundle bundle) {
+
+    CampaignDetailFragment campaignDetailFragment = new CampaignDetailFragment();
+    campaignDetailFragment.setArguments(bundle);
+    return campaignDetailFragment;
   }
 
   @Override protected int getFragmentLayout() {

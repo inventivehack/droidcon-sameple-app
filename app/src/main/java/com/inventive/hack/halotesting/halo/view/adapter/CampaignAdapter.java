@@ -35,6 +35,10 @@ public class CampaignAdapter extends RecyclerView.Adapter<CampaignViewHolder> {
     notifyDataSetChanged();
   }
 
+  public boolean isEmptyList() {
+    return mViewModelList.isEmpty();
+  }
+
   @Override public CampaignViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
     View viewItem = inflater.inflate(R.layout.item_campaign, parent, false);
     return new CampaignViewHolder(viewItem, mPresenter, mContext);
@@ -47,4 +51,6 @@ public class CampaignAdapter extends RecyclerView.Adapter<CampaignViewHolder> {
   @Override public int getItemCount() {
     return mViewModelList.size();
   }
+
+
 }

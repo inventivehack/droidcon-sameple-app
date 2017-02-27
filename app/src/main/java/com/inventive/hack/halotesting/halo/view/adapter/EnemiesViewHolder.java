@@ -44,7 +44,7 @@ public class EnemiesViewHolder extends RecyclerView.ViewHolder {
   }
 
   private void renderImage(String imageUrl) {
-    Glide.with(mContext).load(imageUrl).crossFade().centerCrop().into(mImageEnemy);
+    Glide.with(mContext).load(imageUrl).crossFade().into(mImageEnemy);
   }
 
   private void renderTitle(String name) {

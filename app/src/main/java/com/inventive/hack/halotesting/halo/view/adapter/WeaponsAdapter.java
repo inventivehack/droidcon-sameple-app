@@ -37,8 +37,13 @@ public class WeaponsAdapter extends RecyclerView.Adapter<WeaponViewHolder> {
     notifyDataSetChanged();
   }
 
+
+  public boolean isEmptyList() {
+    return mViewModelList.isEmpty();
+  }
+
   @Override public WeaponViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-    View viewItem = inflater.inflate(R.layout.item_campaign, parent, false);
+    View viewItem = inflater.inflate(R.layout.item_weapon, parent, false);
     return new WeaponViewHolder(viewItem, mPresenter, mContext);
   }
 
