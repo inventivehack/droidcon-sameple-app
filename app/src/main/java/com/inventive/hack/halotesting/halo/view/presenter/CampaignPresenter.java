@@ -3,6 +3,7 @@ package com.inventive.hack.halotesting.halo.view.presenter;
 import com.inventive.hack.halotesting.common.domain.UseCase;
 import com.inventive.hack.halotesting.common.view.Presenter;
 import com.inventive.hack.halotesting.halo.domain.model.CampaignResponse;
+import com.inventive.hack.halotesting.halo.view.viewmodel.CampaignViewModel;
 import com.inventive.hack.halotesting.halo.view.viewmvp.CampaignView;
 import java.util.List;
 import javax.inject.Inject;
@@ -21,6 +22,10 @@ public class CampaignPresenter extends Presenter<CampaignView> {
   }
 
   @Override public void destroy() {
+
+  }
+
+  public void selectCampaign(CampaignViewModel viewModel) {
 
   }
 }

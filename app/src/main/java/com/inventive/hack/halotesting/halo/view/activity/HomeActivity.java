@@ -1,4 +1,4 @@
-package com.inventive.hack.halotesting.halo.view.actitity;
+package com.inventive.hack.halotesting.halo.view.activity;
 
 import android.content.Context;
 import android.content.Intent;

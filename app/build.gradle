@@ -55,6 +55,7 @@ dependencies {
   compile supportDependencies.appCompat
   compile supportDependencies.design
   compile daggerDependencies.dagger
+  compile supportDependencies.cardView
   annotationProcessor daggerDependencies.daggerCompiler
 
   compile reactiveDependencies.rxJava

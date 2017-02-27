@@ -1,4 +1,4 @@
-package com.inventive.hack.halotesting.halo.view.actitity;
+package com.inventive.hack.halotesting.halo.view.activity;
 
 import android.support.v4.app.Fragment;
 import com.inventive.hack.halotesting.R;

@@ -4,6 +4,7 @@ import com.inventive.hack.halotesting.common.domain.UseCase;
 import com.inventive.hack.halotesting.common.view.Presenter;
 import com.inventive.hack.halotesting.halo.domain.model.CampaignResponse;
 import com.inventive.hack.halotesting.halo.domain.model.EnemyResponse;
+import com.inventive.hack.halotesting.halo.view.viewmodel.EnemyViewModel;
 import com.inventive.hack.halotesting.halo.view.viewmvp.CampaignView;
 import com.inventive.hack.halotesting.halo.view.viewmvp.EnemiesView;
 import java.util.List;
@@ -23,6 +24,10 @@ public class EnemiesPresenter extends Presenter<EnemiesView> {
   }
 
   @Override public void destroy() {
+
+  }
+
+  public void selectEnemy(EnemyViewModel viewModel) {
 
   }
 }

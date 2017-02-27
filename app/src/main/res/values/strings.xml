@@ -72,8 +72,8 @@
   <string name="message_error_upload_profile_photo_response_network">Ocurro un error al actualizar su foto de pefil..\nVuelva a intentarlo más tarde</string>
   <string name="message_error_upload__profile_photo_network">Ocurro un error al actualizar su foto de pefil.\nVuelva a intentarlo</string>
 
-
-
-
+  <string name="message_error_list_connection">Ocurrió un problema</string>
+  <string name="message_error_list_touch_connection">Toque la pantalla para volver a intentar</string>
+  <string name="not_results">No se encontraron resultados</string>
 
 </resources>
