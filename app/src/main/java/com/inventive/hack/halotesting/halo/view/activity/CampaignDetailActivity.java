@@ -3,6 +3,7 @@ package com.inventive.hack.halotesting.halo.view.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import com.inventive.hack.halotesting.R;
 import com.inventive.hack.halotesting.common.view.BaseFragActivity;
 import com.inventive.hack.halotesting.halo.view.fragment.CampaignDetailFragment;
@@ -18,11 +19,11 @@ import com.inventive.hack.halotesting.injector.component.HaloComponent;
 public class CampaignDetailActivity extends BaseFragActivity
     implements HasComponent<HaloComponent> {
 
-  private static final String CAMPAIGN_ARGS = "campaign";
+  public static final String CAMPAIGN_ARGS = "campaign";
   private HaloComponent mHaloComponent;
 
   public static Intent provideIntent(Context context, CampaignViewModel campaignViewModel) {
-    return new Intent(context, HomeActivity.class).putExtra(CAMPAIGN_ARGS, campaignViewModel);
+    return new Intent(context, CampaignDetailActivity.class).putExtra(CAMPAIGN_ARGS, campaignViewModel);
   }
 
 
@@ -36,6 +37,11 @@ public class CampaignDetailActivity extends BaseFragActivity
 
   @Override protected int getLayout() {
     return R.layout.activity_campaign_detail;
+  }
+
+  @Override protected void setupActionBar(ActionBar actionBar) {
+    super.setupActionBar(actionBar);
+    actionBar.setDisplayHomeAsUpEnabled(true);
   }
 
   @Override protected void initView() {

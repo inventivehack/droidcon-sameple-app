@@ -41,7 +41,7 @@
         android:layout_marginRight="@dimen/spacing_medium"
         android:maxLines="1"
         android:text="Osiris"
-        android:textColor="@color/secondary_text_white"
+        android:textColor="@color/primary_text_white"
         android:textSize="@dimen/letter_large"
         android:textStyle="bold"
         />

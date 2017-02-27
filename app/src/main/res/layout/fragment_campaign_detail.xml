@@ -1,18 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:gravity="center"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <ImageView
+      android:id="@+id/image_campaign"
+      android:layout_width="match_parent"
+      android:layout_height="192dp"
+      android:scaleType="centerCrop"
+      android:contentDescription="@string/app_name"
+      android:src="@drawable/example"
+      />
 
   <TextView
-      android:layout_width="wrap_content"
-      android:textStyle="bold"
-      android:textSize="@dimen/letter_large"
-      android:textColor="@color/secondary_text_black"
-      android:text="@string/app_name"
+      android:id="@+id/label_name_campaign"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/spacing_large"
+      android:layout_marginLeft="@dimen/spacing_large"
+      android:layout_marginRight="@dimen/spacing_large"
+      android:maxLines="1"
+      android:text="Osiris"
+      android:textColor="@color/primary_text_white"
+      android:textSize="@dimen/letter_xlarge"
+      android:textStyle="bold"
       />
+
+
+  <TextView
+      android:id="@+id/label_description_campaign"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/spacing_large"
+      android:layout_marginLeft="@dimen/spacing_large"
+      android:layout_marginRight="@dimen/spacing_large"
+      android:text="Osiris"
+      android:textColor="@color/secondary_text_white"
+      android:textSize="@dimen/letter_medium"
+      />
+
 
 
 </LinearLayout>

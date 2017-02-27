@@ -1,5 +1,6 @@
 package com.inventive.hack.halotesting.injector.component;
 
+import com.inventive.hack.halotesting.halo.view.fragment.CampaignDetailFragment;
 import com.inventive.hack.halotesting.halo.view.fragment.CampaignFragment;
 import com.inventive.hack.halotesting.halo.view.fragment.EnemiesFragment;
 import com.inventive.hack.halotesting.halo.view.fragment.WeaponsFragment;
@@ -18,4 +19,7 @@ public interface HaloComponent {
   void inject(EnemiesFragment enemiesFragment);
 
   void inject(WeaponsFragment weaponsFragment);
+
+  void inject(CampaignDetailFragment campaignDetailFragment);
+
 }

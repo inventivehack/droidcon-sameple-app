@@ -33,11 +33,11 @@ android {
   productFlavors {
     mock {
       //      applicationIdSuffix ".debug"
-      resValue 'string', 'app_name', "Debug Halo App"
+      resValue 'string', 'app_name', "Halo App"
       buildConfigField 'String', 'BASE_URL', BASE_URL_DEBUG_SERVER
     }
     prod {
-      resValue 'string', 'app_name', "App Halo"
+      resValue 'string', 'app_name', "Halo App"
       buildConfigField 'String', 'BASE_URL', BASE_URL_PRODUCTION_SERVER
     }
   }

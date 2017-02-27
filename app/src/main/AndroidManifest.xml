@@ -12,7 +12,8 @@
       android:label="@string/app_name"
       android:supportsRtl="true"
       android:theme="@style/AppTheme">
-    <activity android:name=".halo.view.activity.HomeActivity"
+    <activity
+        android:name=".halo.view.activity.HomeActivity"
         android:theme="@style/AppTheme.HomeActivityTheme"
         >
       <intent-filter>
@@ -21,6 +22,13 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
+
+    <activity android:name=".halo.view.activity.CampaignDetailActivity"
+        android:label="@string/title_campaign_detail_activity">
+
+    </activity>
+
+
   </application>
 
 </manifest>

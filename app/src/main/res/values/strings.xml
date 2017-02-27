@@ -75,5 +75,6 @@
   <string name="message_error_list_connection">Ocurrió un problema</string>
   <string name="message_error_list_touch_connection">Toque la pantalla para volver a intentar</string>
   <string name="not_results">No se encontraron resultados</string>
+  <string name="title_campaign_detail_activity">Detalle</string>
 
 </resources>
