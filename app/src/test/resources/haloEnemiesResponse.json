@@ -1,0 +1,11 @@
+[
+  {
+    "faction": "Covenant",
+    "name": "Grunt",
+    "description": "Los Unggoy, designados por los Forerunner como Monachus Frigus (Latín: Monje Frío), son una especie bípeda de vertebrados que forman parte del Covenant.",
+    "largeIconImageUrl": "https://content.halocdn.com/media/Default/games/halo-5-guardians/api/enemies/grunt-542x305-e637c16cb8aa464c86f305c011803de3.png",
+    "smallIconImageUrl": "https://content.halocdn.com/media/Default/games/halo-5-guardians/api/enemies/grunt-332x132-f2dfd3a39ba346918e61e0127a5d7190.png",
+    "id": "2625192795",
+    "contentId": "12404a70-3c88-43c2-9500-ed8a5ab64dbe"
+  }
+]

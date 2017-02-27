@@ -1,0 +1,11 @@
+[
+  {
+    "missionNumber": 1,
+    "name": "Osiris",
+    "description": "Fireteam Osiris are dispatched to recover the UNSC’s most wanted criminal: Doctor Catherine Elizabeth Halsey",
+    "imageUrl": "https://content.halocdn.com/media/Default/games/halo-5-guardians/map-images/campaign/campaign_missions_array01-9c1ff3f00e364bfaa0e059a90fa37d92.jpg",
+    "type": "OsirisTeam",
+    "id": "73ed1fd0-45e5-4bb9-ab6a-d2852c04ea7d",
+    "contentId": "94ad113a-31ce-4fce-ac4a-87e6cfbb88d9"
+  }
+]
