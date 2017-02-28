@@ -2,10 +2,9 @@ package com.inventive.hack.halotesting.common.domain;
 
 import com.inventive.hack.halotesting.common.view.Presenter;
 import io.reactivex.Observable;
-import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.Scheduler;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.observers.DisposableObserver;
-import io.reactivex.schedulers.Schedulers;
 
 /**
  * Dominio con un caso de uso asíncrono por default. Para comunicar las capa de presentación con
@@ -19,9 +18,13 @@ import io.reactivex.schedulers.Schedulers;
 public abstract class UseCase<T> {
 
   private final CompositeDisposable compositeDisposable;
+  private final Scheduler mExecutorThread;
+  private final Scheduler mUiThread;
 
-  public UseCase() {
+  public UseCase(Scheduler executorThread, Scheduler uiThread) {
     this.compositeDisposable = new CompositeDisposable();
+    mExecutorThread = executorThread;
+    mUiThread = uiThread;
   }
 
   /**
@@ -34,10 +37,9 @@ public abstract class UseCase<T> {
    * Observable},
    */
   @SuppressWarnings("unchecked") public void execute(DisposableObserver<T> disposableObserver) {
-    compositeDisposable.add(buildObservableUseCase().subscribeOn(Schedulers.newThread())
-        .observeOn(AndroidSchedulers.mainThread())
+    compositeDisposable.add(buildObservableUseCase().subscribeOn(mExecutorThread)
+        .observeOn(mUiThread)
         .subscribeWith(disposableObserver));
-
   }
 
   /**
@@ -56,5 +58,5 @@ public abstract class UseCase<T> {
    *
    * @return {@link Observable} construido.
    */
-  protected abstract Observable<T> buildObservableUseCase();
+  public abstract Observable<T> buildObservableUseCase();
 }

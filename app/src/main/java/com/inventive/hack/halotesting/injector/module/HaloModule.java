@@ -12,7 +12,11 @@ import com.inventive.hack.halotesting.halo.domain.usecase.WeaponsUseCase;
 import com.inventive.hack.halotesting.injector.Activity;
 import dagger.Module;
 import dagger.Provides;
+import io.reactivex.Scheduler;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 import java.util.List;
+import javax.inject.Named;
 
 /**
  * 24/02/2017.
@@ -41,7 +45,13 @@ import java.util.List;
     return haloDataRepository;
   }
 
+  @Provides @Activity @Named("executor_thread") Scheduler provideExecutorThread() {
+    return Schedulers.newThread();
+  }
 
+  @Provides @Activity @Named("ui_thread") Scheduler provideUiThread() {
+    return AndroidSchedulers.mainThread();
+  }
 
 
 }
