@@ -25,22 +25,22 @@ import static org.mockito.Mockito.only;
 
 @RunWith(MockitoJUnitRunner.class) public class CampaignUseCaseTest {
 
-  @Mock private HaloRepository mRepository;
+  @Mock private HaloRepository mRepositoryMock;
 
   private UseCase<List<CampaignResponse>> mCampaignResponseUseCase;
 
   @Before public void setup() {
     MockitoAnnotations.initMocks(this);
     mCampaignResponseUseCase =
-        new CampaignUseCase(Schedulers.trampoline(), Schedulers.trampoline(), mRepository);
+        new CampaignUseCase(Schedulers.trampoline(), Schedulers.trampoline(), mRepositoryMock);
   }
 
   @Test public void shouldCallRepositoryTest() {
 
-    Mockito.when(mRepository.getCampaign()).thenReturn(getFakeObservableCampaignList());
+    Mockito.when(mRepositoryMock.getCampaign()).thenReturn(getFakeObservableCampaignList());
     mCampaignResponseUseCase.execute(new TestDisposableObserver());
 
-    Mockito.verify(mRepository, only()).getCampaign();
+    Mockito.verify(mRepositoryMock, only()).getCampaign();
   }
 
   private Observable<List<CampaignResponse>> getFakeObservableCampaignList() {

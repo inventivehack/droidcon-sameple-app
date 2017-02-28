@@ -1,8 +1,5 @@
 package com.inventive.hack.halotesting.halo.data.repository;
 
-import com.inventive.hack.halotesting.halo.data.entity.CampaignEntityResponse;
-import com.inventive.hack.halotesting.halo.data.entity.EnemyEntityResponse;
-import com.inventive.hack.halotesting.halo.data.entity.WeaponEntityResponse;
 import com.inventive.hack.halotesting.halo.domain.model.CampaignResponse;
 import com.inventive.hack.halotesting.halo.domain.model.EnemyResponse;
 import com.inventive.hack.halotesting.halo.domain.model.WeaponResponse;
