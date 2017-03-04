@@ -14,5 +14,5 @@ import javax.inject.Singleton;
  * Android</a></p>
  */
 @Singleton @Component(modules = MainModule.class) public interface MainComponent {
-  Context context();
+  //Context context();
 }

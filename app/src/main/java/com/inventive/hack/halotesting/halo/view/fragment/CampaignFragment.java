@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.OnClick;
 import com.inventive.hack.halotesting.R;
@@ -124,7 +123,7 @@ public class CampaignFragment extends BaseFragment
   }
 
   @Override public void hideMessageNotResults() {
-    mElementNotResults.setVisibility(View.GONE);
+    if (mElementNotResults != null) mElementNotResults.setVisibility(View.GONE);
   }
 
   @Override public void showMessageConnectionError() {

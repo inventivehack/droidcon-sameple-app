@@ -4,17 +4,17 @@
   <group android:checkableBehavior="single">
     <item
         android:id="@+id/drawer_item_campaign"
-        android:icon="@drawable/menu_home"
+        android:icon="@drawable/ic_campaign"
         android:title="@string/section_title_campaign"/>
 
     <item
         android:id="@+id/drawer_item_enemies"
-        android:icon="@drawable/menu_home"
+        android:icon="@drawable/ic_enemy"
         android:title="@string/section_title_enemies"/>
 
     <item
         android:id="@+id/drawer_item_weapons"
-        android:icon="@drawable/menu_home"
+        android:icon="@drawable/ic_weapon"
         android:title="@string/section_title_weapons"/>
   </group>
 </menu>

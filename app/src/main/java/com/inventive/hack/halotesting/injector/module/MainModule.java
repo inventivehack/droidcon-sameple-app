@@ -21,15 +21,15 @@ import javax.inject.Singleton;
  */
 @Module public class MainModule {
 
-  private final Application application;
-
-  public MainModule(Application application) {
-    this.application = application;
-  }
-
-  @Provides @Singleton Context provideApplicationContext() {
-    return application;
-  }
-
-
+  //private final Application application;
+  //
+  //public MainModule(Application application) {
+  //  this.application = application;
+  //}
+  //
+  //@Provides @Singleton Context provideApplicationContext() {
+  //  return application;
+  //}
+  //
+  //
 }

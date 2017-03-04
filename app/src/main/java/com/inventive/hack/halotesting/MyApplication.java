@@ -1,6 +1,7 @@
 package com.inventive.hack.halotesting;
 
 import android.app.Application;
+import android.support.annotation.VisibleForTesting;
 import com.inventive.hack.halotesting.injector.component.DaggerMainComponent;
 import com.inventive.hack.halotesting.injector.component.MainComponent;
 import com.inventive.hack.halotesting.injector.module.MainModule;
@@ -18,10 +19,15 @@ public class MyApplication extends Application {
   }
 
   private void initializeInjector() {
-    mainComponent = DaggerMainComponent.builder().mainModule(new MainModule(this)).build();
+    mainComponent = DaggerMainComponent.builder().build();
   }
 
   public MainComponent getMainComponent() {
     return mainComponent;
   }
+
+  @VisibleForTesting public void setComponent(MainComponent mainComponent) {
+    this.mainComponent = mainComponent;
+  }
+
 }
