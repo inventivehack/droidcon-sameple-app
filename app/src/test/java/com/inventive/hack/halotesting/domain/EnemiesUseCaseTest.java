@@ -38,15 +38,20 @@ import static org.mockito.Mockito.only;
   @Test public void shouldCallRepositoryTest() {
 
     Mockito.when(mRepository.getEnemies()).thenReturn(getFakeObservableEnemiesList());
+
     mEnemiesResponseUseCase.execute(new TestDisposableObserver());
 
     Mockito.verify(mRepository, only()).getEnemies();
   }
 
+
   private Observable<List<EnemyResponse>> getFakeObservableEnemiesList() {
     List<EnemyResponse> testList = new ArrayList<>();
     return Observable.just(testList);
   }
+
+
+
 
   private class TestDisposableObserver extends DisposableObserver<List<EnemyResponse>> {
 

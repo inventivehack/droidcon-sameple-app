@@ -20,9 +20,13 @@ import static org.junit.Assert.assertThat;
 
 public class CampaignApiClientTest extends ApiClientTest {
 
+
+
   @Test public void shouldRequestContainsCampaignPathTest() throws IOException,
       InterruptedException {
+
     HaloRestApi haloRestApi = new HaloRestApiImpl(getBaseEndpoint());
+
     enqueueMockResponse("haloCampaignResponse.json", 200);
 
     TestObserver<List<CampaignEntityResponse>> test = haloRestApi.getCampaign().test();
@@ -32,6 +36,11 @@ public class CampaignApiClientTest extends ApiClientTest {
 
 
   }
+
+
+
+
+
 
   @Test public void shouldListModelContainsResponseTest() throws IOException {
 
@@ -45,6 +54,9 @@ public class CampaignApiClientTest extends ApiClientTest {
 
     assertThatCampaignResponseIsPropertyParsed(entityResponseList);
   }
+
+
+
 
   private void assertThatCampaignResponseIsPropertyParsed(
       List<CampaignEntityResponse> entityResponseList) {
@@ -80,7 +92,7 @@ public class CampaignApiClientTest extends ApiClientTest {
 
     assertThat(entityResponse.getContentId(), is("94ad113a-31ce-4fce-ac4a-87e6cfbb88d9"));
     assertThat(entityResponse.getId(), is("73ed1fd0-45e5-4bb9-ab6a-d2852c04ea7d"));
-    assertThat(entityResponse.getName(), is("Osiris"));
+    assertThat(entityResponse.getName(), is("Osiriss"));
     assertThat(entityResponse.getMissionNumber(), is("1"));
     assertThat(entityResponse.getDescription(),
         is("Fireteam Osiris are dispatched to recover the UNSC’s most wanted criminal: Doctor Catherine Elizabeth Halsey"));

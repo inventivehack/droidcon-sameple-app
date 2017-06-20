@@ -49,12 +49,12 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
     CampaignResponse campaignResponse = givenSomeCampaignResponse();
 
-    Observable<List<CampaignResponse>> fakeObservableCampaignList = getFakeObservableCampaignList(campaignResponse);
+    Observable<List<CampaignResponse>> fakeObservableCampaignList =
+        getFakeObservableCampaignList(campaignResponse);
 
     TestObserver<List<CampaignResponse>> test = fakeObservableCampaignList.test();
 
-    Mockito.when(mRepository.getCampaign())
-        .thenReturn(fakeObservableCampaignList);
+    Mockito.when(mRepository.getCampaign()).thenReturn(fakeObservableCampaignList);
 
     test.awaitTerminalEvent();
 

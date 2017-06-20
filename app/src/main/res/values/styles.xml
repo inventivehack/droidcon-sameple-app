@@ -13,9 +13,9 @@
     <item name="colorControlHighlight">@color/divider_black</item>
     <item name="colorButtonNormal">@color/accent</item>
     <item name="android:windowBackground">@color/window_background</item>
-
     <item name="android:listDivider">@color/divider_black</item>
   </style>
+
 
   <!--<style name="AppTheme.SplashTheme" parent="AppTheme">-->
     <!--<item name="android:windowBackground">@drawable/splash</item>-->
