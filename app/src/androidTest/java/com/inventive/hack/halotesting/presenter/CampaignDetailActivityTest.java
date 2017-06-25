@@ -26,7 +26,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
   @Rule public ActivityTestRule<CampaignDetailActivity> mActivityRule =
       new ActivityTestRule<>(CampaignDetailActivity.class, true, false);
 
-  @Test public void shouldContainConnectionError() {
+  @Test public void shouldContainDetailCampaign() {
 
     CampaignViewModel campaignViewModel = givenSomeCampaignViewModel();
 
@@ -34,7 +34,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
     assertThatViewsAreDisplay();
 
-    AssetThatViewsContainsExpectedValues(campaignViewModel);
+    assetThatViewsContainsExpectedValues(campaignViewModel);
   }
 
   private void assertThatViewsAreDisplay() {
@@ -43,7 +43,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
     onView(withId(R.id.label_description_campaign)).check(matches(isDisplayed()));
   }
 
-  private void AssetThatViewsContainsExpectedValues(CampaignViewModel campaignViewModel) {
+  private void assetThatViewsContainsExpectedValues(CampaignViewModel campaignViewModel) {
     onView(withId(R.id.label_name_campaign)).check(matches(withText(campaignViewModel.getName())));
     onView(withId(R.id.label_description_campaign)).check(
         matches(withText(campaignViewModel.getDescription())));

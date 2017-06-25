@@ -8,8 +8,8 @@ import com.inventive.hack.halotesting.common.view.BaseNavigationActivity;
 import com.inventive.hack.halotesting.halo.view.fragment.CampaignFragment;
 import com.inventive.hack.halotesting.halo.view.fragment.EnemiesFragment;
 import com.inventive.hack.halotesting.halo.view.fragment.WeaponsFragment;
+import com.inventive.hack.halotesting.injector.ComponentFactory;
 import com.inventive.hack.halotesting.injector.HasComponent;
-import com.inventive.hack.halotesting.injector.component.DaggerHaloComponent;
 import com.inventive.hack.halotesting.injector.component.HaloComponent;
 
 public class HomeActivity extends BaseNavigationActivity implements HasComponent<HaloComponent> {
@@ -31,7 +31,7 @@ public class HomeActivity extends BaseNavigationActivity implements HasComponent
   }
 
   private void initializeInjector() {
-    mComponent = DaggerHaloComponent.builder().mainComponent(getApplicationComponent()).build();
+    mComponent = ComponentFactory.getHaloComponent(getApplicationComponent());
   }
 
   @Override protected void selectNavigationHeader() {

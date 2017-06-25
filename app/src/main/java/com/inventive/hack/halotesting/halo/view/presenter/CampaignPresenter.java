@@ -1,8 +1,10 @@
 package com.inventive.hack.halotesting.halo.view.presenter;
 
+import android.util.Log;
 import com.inventive.hack.halotesting.common.domain.UseCase;
 import com.inventive.hack.halotesting.common.view.Presenter;
 import com.inventive.hack.halotesting.halo.domain.model.CampaignResponse;
+import com.inventive.hack.halotesting.halo.domain.usecase.CampaignUseCase;
 import com.inventive.hack.halotesting.halo.view.viewmodel.CampaignViewModel;
 import com.inventive.hack.halotesting.halo.view.viewmodel.mapper.CampaingViewModelMapper;
 import com.inventive.hack.halotesting.halo.view.viewmvp.CampaignView;
@@ -25,6 +27,7 @@ public class CampaignPresenter extends Presenter<CampaignView> {
   }
 
   public void getCampaign() {
+    Log.d(CampaignPresenter.class.getSimpleName(), "getCampaign");
     getView().disableRefresh();
     getView().hideMessageConnectionError();
     getView().showLoading();

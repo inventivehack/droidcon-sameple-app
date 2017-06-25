@@ -8,8 +8,8 @@ import com.inventive.hack.halotesting.R;
 import com.inventive.hack.halotesting.common.view.BaseFragActivity;
 import com.inventive.hack.halotesting.halo.view.fragment.CampaignDetailFragment;
 import com.inventive.hack.halotesting.halo.view.viewmodel.CampaignViewModel;
+import com.inventive.hack.halotesting.injector.ComponentFactory;
 import com.inventive.hack.halotesting.injector.HasComponent;
-import com.inventive.hack.halotesting.injector.component.DaggerHaloComponent;
 import com.inventive.hack.halotesting.injector.component.HaloComponent;
 
 /**
@@ -20,12 +20,12 @@ public class CampaignDetailActivity extends BaseFragActivity
     implements HasComponent<HaloComponent> {
 
   public static final String CAMPAIGN_ARGS = "campaign";
-  private HaloComponent mHaloComponent;
+  private HaloComponent mComponent;
 
   public static Intent provideIntent(Context context, CampaignViewModel campaignViewModel) {
-    return new Intent(context, CampaignDetailActivity.class).putExtra(CAMPAIGN_ARGS, campaignViewModel);
+    return new Intent(context, CampaignDetailActivity.class).putExtra(CAMPAIGN_ARGS,
+        campaignViewModel);
   }
-
 
   @Override protected Fragment getFragmentInstance() {
     return CampaignDetailFragment.newInstance(getIntent().getExtras());
@@ -50,11 +50,11 @@ public class CampaignDetailActivity extends BaseFragActivity
   }
 
   private void initializeInjector() {
-    mHaloComponent =
-        DaggerHaloComponent.builder().mainComponent(getApplicationComponent()).build();
+    mComponent = ComponentFactory.getHaloComponent(getApplicationComponent());
+    ;
   }
 
   @Override public HaloComponent getComponent() {
-    return mHaloComponent;
+    return mComponent;
   }
 }

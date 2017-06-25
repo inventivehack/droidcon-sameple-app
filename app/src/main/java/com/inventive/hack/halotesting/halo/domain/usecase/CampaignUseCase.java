@@ -1,5 +1,6 @@
 package com.inventive.hack.halotesting.halo.domain.usecase;
 
+import android.util.Log;
 import com.inventive.hack.halotesting.common.domain.UseCase;
 import com.inventive.hack.halotesting.halo.data.repository.HaloRepository;
 import com.inventive.hack.halotesting.halo.domain.model.CampaignResponse;
@@ -22,8 +23,6 @@ public class CampaignUseCase extends UseCase<List<CampaignResponse>> {
     super(executorThread, uiThread);
     mHaloRepository = haloRepository;
   }
-
-  @Inject
 
   @Override public Observable<List<CampaignResponse>> buildObservableUseCase() {
     return mHaloRepository.getCampaign();

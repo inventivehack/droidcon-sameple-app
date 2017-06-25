@@ -24,34 +24,31 @@ import javax.inject.Named;
 
 @Module public class HaloModule {
 
-  @Provides @Activity UseCase<List<CampaignResponse>> provideCampaignUserCase(
-      CampaignUseCase campaignUseCase) {
-    return campaignUseCase;
-  }
-
-
-  @Provides @Activity UseCase<List<EnemyResponse>> provideEnemiesUserCase(EnemiesUseCase campaignUseCase) {
-    return campaignUseCase;
-  }
-
-  @Provides @Activity UseCase<List<WeaponResponse>> provideWeaponsUserCase(
-      WeaponsUseCase campaignUseCase) {
-    return campaignUseCase;
-  }
-
-
-  @Provides @Activity HaloRepository provideHaloRepository(
-      HaloDataRepository haloDataRepository) {
+  @Provides @Activity
+  public HaloRepository provideHaloRepository(HaloDataRepository haloDataRepository) {
     return haloDataRepository;
   }
 
-  @Provides @Activity @Named("executor_thread") Scheduler provideExecutorThread() {
+  @Provides @Activity
+  public UseCase<List<CampaignResponse>> provideCampaignUserCase(CampaignUseCase campaignUseCase) {
+    return campaignUseCase;
+  }
+
+  @Provides @Activity
+  public UseCase<List<EnemyResponse>> provideEnemiesUserCase(EnemiesUseCase campaignUseCase) {
+    return campaignUseCase;
+  }
+
+  @Provides @Activity
+  public UseCase<List<WeaponResponse>> provideWeaponsUserCase(WeaponsUseCase campaignUseCase) {
+    return campaignUseCase;
+  }
+
+  @Provides @Activity @Named("executor_thread") public Scheduler provideExecutorThread() {
     return Schedulers.newThread();
   }
 
-  @Provides @Activity @Named("ui_thread") Scheduler provideUiThread() {
+  @Provides @Activity @Named("ui_thread") public Scheduler provideUiThread() {
     return AndroidSchedulers.mainThread();
   }
-
-
 }

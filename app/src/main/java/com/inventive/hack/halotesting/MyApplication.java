@@ -26,8 +26,7 @@ public class MyApplication extends Application {
     return mainComponent;
   }
 
-  @VisibleForTesting public void setComponent(MainComponent mainComponent) {
+  public void setComponent(MainComponent mainComponent) {
     this.mainComponent = mainComponent;
   }
-
 }

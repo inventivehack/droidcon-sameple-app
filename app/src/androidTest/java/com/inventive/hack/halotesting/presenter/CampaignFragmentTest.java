@@ -8,8 +8,10 @@ import com.inventive.hack.halotesting.MyApplication;
 import com.inventive.hack.halotesting.halo.data.repository.HaloRepository;
 import com.inventive.hack.halotesting.halo.domain.model.CampaignResponse;
 import com.inventive.hack.halotesting.halo.view.activity.HomeActivity;
+import com.inventive.hack.halotesting.injector.ComponentFactory;
+import com.inventive.hack.halotesting.injector.component.HaloComponent;
 import com.inventive.hack.halotesting.injector.component.MainComponent;
-import com.inventive.hack.halotesting.injector.module.MainModule;
+import com.inventive.hack.halotesting.injector.module.HaloModule;
 import io.reactivex.Observable;
 import io.reactivex.observers.TestObserver;
 import it.cosenonjaviste.daggermock.DaggerMockRule;
@@ -32,16 +34,16 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 @RunWith(AndroidJUnit4.class) @LargeTest public class CampaignFragmentTest {
 
-  @Rule public DaggerMockRule<MainComponent> daggerRule =
-      new DaggerMockRule<>(MainComponent.class, new MainModule()).set(component -> {
-        MyApplication mMyApplication = (MyApplication) InstrumentationRegistry.getInstrumentation()
-            .getTargetContext()
-            .getApplicationContext();
-        mMyApplication.setComponent(component);
+  @Rule public DaggerMockRule<HaloComponent> mMockRule =
+      new DaggerMockRule<>(HaloComponent.class, new HaloModule()).addComponentDependency(
+          MainComponent.class).set(new DaggerMockRule.ComponentSetter<HaloComponent>() {
+        @Override public void setComponent(HaloComponent component) {
+          ComponentFactory.setHaloComponent(component);
+        }
       });
 
   @Rule public ActivityTestRule<HomeActivity> mActivityRule =
-      new ActivityTestRule<>(HomeActivity.class);
+      new ActivityTestRule<>(HomeActivity.class, false, false);
 
   @Mock public HaloRepository mRepository;
 
@@ -56,10 +58,14 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
     Mockito.when(mRepository.getCampaign()).thenReturn(fakeObservableCampaignList);
 
+    mActivityRule.launchActivity(null);
+
     test.awaitTerminalEvent();
+
 
     onView(withText(campaignResponse.getName())).check(matches(isDisplayed()));
     onView(withText(campaignResponse.getDescription())).check(matches(isDisplayed()));
+    Mockito.verify(mRepository).getCampaign();
   }
 
   private Observable<List<CampaignResponse>> getFakeObservableCampaignList(

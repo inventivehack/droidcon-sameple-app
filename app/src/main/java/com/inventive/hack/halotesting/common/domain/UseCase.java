@@ -1,6 +1,8 @@
 package com.inventive.hack.halotesting.common.domain;
 
+import android.util.Log;
 import com.inventive.hack.halotesting.common.view.Presenter;
+import com.inventive.hack.halotesting.halo.domain.usecase.CampaignUseCase;
 import io.reactivex.Observable;
 import io.reactivex.Scheduler;
 import io.reactivex.disposables.CompositeDisposable;
